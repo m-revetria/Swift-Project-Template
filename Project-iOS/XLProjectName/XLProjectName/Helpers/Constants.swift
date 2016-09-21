@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import Opera
-import XLSwiftKit
+import UIKit
 
 struct Constants {
 
@@ -23,24 +22,20 @@ struct Constants {
     }
 
     struct Keychain {
-        static let serviceIdentifier = UIApplication.bundleIdentifier
+        static let serviceIdentifier = Bundle.main.bundleIdentifier!
         static let sessionToken = "session_token"
         static let deviceToken = "device_token"
     }
-    
+
     struct Formatters {
-        
+
         static let debugConsoleDateFormatter: DateFormatter = {
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
             formatter.timeZone = TimeZone(identifier: "UTC")!
             return formatter
         }()
-        
+
     }
-    
-    struct Debug {
-        static let crashlytics = false
-        static let jsonResponse = false
-    }
+
 }
