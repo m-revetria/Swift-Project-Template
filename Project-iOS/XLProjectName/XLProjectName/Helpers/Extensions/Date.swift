@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
-extension Date {
+public extension Date {
 
-    func dblog() -> String {
+    public func dblog() -> String {
         return Constants.Formatters.debugConsoleDateFormatter.string(from: self)
     }
 

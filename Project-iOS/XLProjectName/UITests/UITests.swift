@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import Nimble
 
 class UITests: XCTestCase {
     
@@ -29,7 +28,7 @@ class UITests: XCTestCase {
         super.tearDown()
     }
     
-    func testNothing() {
+    func testSanity() {
         
     }
 }
