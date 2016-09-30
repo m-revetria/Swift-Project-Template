@@ -6,6 +6,7 @@
 //  Copyright © 2016 'XLOrganizationName'. All rights reserved.
 //
 
+import Alamofire
 import Crashlytics
 import Eureka
 import Fabric
@@ -20,6 +21,39 @@ extension AppDelegate {
         #if STAGING
         Fabric.sharedSDK().debug = true
         #endif
+    }
+
+}
+
+// MARK: - Networking
+
+extension AppDelegate {
+
+    func setupNetworking() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(AppDelegate.requestDidComplete(notification:)),
+            name: Alamofire.Notification.Name.Task.DidComplete,
+            object: nil)
+    }
+
+    func requestDidComplete(notification: NSNotification) {
+        guard let task = notification.userInfo?[Alamofire.Notification.Key.Task] as? URLSessionTask,
+            let response = task.response as? HTTPURLResponse else {
+            return
+        }
+
+        if Constants.Network.successRange ~= response.statusCode {
+            // TODO: Get the authentication token from the response
+            if let token = response.allHeaderFields[Constants.Network.authorizationHeader] as? String {
+                SessionController.default.token = token
+            }
+        } else if response.statusCode == Constants.Network.unauthorized && SessionController.default.isLoggedIn() {
+            SessionController.default.clearSession()
+            DispatchQueue.main.async {
+                // TODO: Take the user to the welcome screen
+            }
+        }
     }
 
 }
