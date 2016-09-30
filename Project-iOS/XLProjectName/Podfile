@@ -5,10 +5,30 @@ use_frameworks!
 
 # Add Application pods here
 def app_pods
+    pod 'Alamofire', '~> 4.0.1'
+    pod 'AlamofireImage', '~> 3.1.0'
+    pod 'Crashlytics', '~> 3.8.2'
+    pod 'Decodable', git: 'https://github.com/Anviking/Decodable.git', branch: 'master'
+    pod 'DynamicColor', '~> 3.1.0'
+    pod 'Fabric', '~> 1.6.9'
+    pod 'Eureka', git: 'https://github.com/xmartlabs/Eureka.git', tag: '2.0.0-beta.1'
+    pod 'KeychainAccess', '~> 3.0.0'
+    pod 'NVActivityIndicatorView', '~> 3.0'
+    pod 'Opera', git: 'https://github.com/xmartlabs/Opera', branch: 'Swift3'
+    pod 'R.swift', '~> 3.0.0'
+    pod 'RealmSwift', '~> 1.1.0'
+    pod 'Result', '~> 3.0.0'
+    pod 'RxCocoa', '= 3.0.0-beta.2'
+    pod 'RxSwift',  '= 3.0.0-beta.2'
+    pod 'RxRealm', git: 'https://github.com/RxSwiftCommunity/RxRealm.git', tag: '0.2.3'
+    pod 'SwiftDate', '~> 4.0.5'
+    pod 'XLSwiftKit', '~> 2.0.0'
 end
 
 # Add Testing pods here
 def testing_pods
+    pod 'Quick', '~> 0.10.0'
+    pod 'Nimble', '~> 5.0.0'
 end
 
 target 'XLProjectName' do

@@ -8,20 +8,17 @@
 
 import XCTest
 
-class Tests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testSanity() {
-        XCTAssert(true, "Santity test should pass")
+import Nimble
+import Quick
+
+class Tests: QuickSpec {
+
+    override func spec() {
+        describe("The 'Sanity' spec") {
+            it("should pass") {
+                expect(true).to(beTrue())
+            }
+        }
     }
     
 }

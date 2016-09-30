@@ -12,7 +12,8 @@ import UIKit
 struct Constants {
 
 	struct Network {
-        static let baseUrl = URL(string: "https://api.github.com")!
+        // TODO: setup api base URL
+        static let baseUrl = URL(string: "https://api.server.com")!
         static let AuthTokenName = "Authorization"
         static let SuccessCode = 200
         static let successRange = 200..<300
