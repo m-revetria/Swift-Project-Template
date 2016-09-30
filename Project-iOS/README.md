@@ -64,6 +64,51 @@ XLProjectName
 ### Code-Style
 Follow the [Swift Style Guide](https://github.com/xmartlabs/Swift-Style-Guide) when working on the project.
 
+### Networking
+
+All networking calls are handled by the class `NetworkManager`.
+In the `RouteType.swift` file, this manager is used by each route as its ManagerType.
+
+Routes are defined in the XLProjectNameApi struct.
+Routes are grouped by resources (eg.: User), which are nested structs within XLProjectNameApi.
+In the `RouteType.swift` file, the current session token is included into each request's parameter before performing a networking call.
+
+To add a new resource and route:
+
+```Swift
+// 1. Add the resources to the XLProjectNameApi struct
+struct XLProjectNameApi {
+
+  struct User {
+  }
+
+}
+
+// 2. Add resource's routes in an extension point
+extension XLProjectNameApi.User {
+
+  struct Register: PostType {
+
+    let userName: String
+    let email: String
+
+    var path = "users"
+    var parameters: [String : AnyObject]? {
+        return ["userName": userName, "email": email]
+    }
+
+  }
+
+}
+
+// 3. Perform a networking call
+XLProjectNameApi.User.Register
+  .rx_object()
+  .subscribeNext() { user in
+    // Do your stuff
+  }
+```
+
 ### Testing
 
 [Nimble](https://github.com/Quick/Nimble) and [Quick](https://github.com/Quick/Quick) are added as dependencies to the tests targets.
