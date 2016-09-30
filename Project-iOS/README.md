@@ -13,6 +13,15 @@ cd <project-dir>
 pod install
 ```
 
+### Fabric
+
+In order to use [Fabric](https://fabric.io), change the dummy keys present in the `Fabric` run script in both project's target with your keys.
+
+### R.swift
+
+[R.swift](https://github.com/mac-cain13/R.swift) is added to the project dependencies.
+Use it to get stronged type access to the project's resources.
+
 ### Swift lint
 
 The project is configured to run [swiftlint](https://github.com/realm/SwiftLint) on each build.
@@ -49,3 +58,15 @@ XLProjectName
   │   ⌊ /* Add user interface tests here */
   ⌊ Podfile /* Specify project's dependencies here */
 ```
+
+## Development
+
+### Code-Style
+Follow the [Swift Style Guide](https://github.com/xmartlabs/Swift-Style-Guide) when working on the project.
+
+### Testing
+
+[Nimble](https://github.com/Quick/Nimble) and [Quick](https://github.com/Quick/Quick) are added as dependencies to the tests targets.
+Prefer using them instead of the native test suite provided by Xcode.
+
+Check out the sanity specs located in `Tests` and `UITests` folders to see the simplest example using these libraries.
