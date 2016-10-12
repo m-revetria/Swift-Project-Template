@@ -84,3 +84,53 @@ extension AppDelegate {
     }
 
 }
+
+// MARK: - Push Notifications
+
+extension AppDelegate {
+
+    func setupPushNotifications() {
+        UIApplication.shared.registerForRemoteNotifications()
+    }
+
+    func requestPermissionToShowUserNotifications() {
+        // Call this function the first time the app needs to show user notifications
+        let types: UIUserNotificationType = [.alert, .badge, .sound]
+        let categories = Set<UIUserNotificationCategory>()
+        let settings = UIUserNotificationSettings(types: types, categories: categories)
+
+        UIApplication.shared.registerUserNotificationSettings(settings)
+    }
+
+    func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
+        // notificationSettings.types
+        // notificationSettings.categories
+    }
+
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        // TODO: Send deviceToken to server
+    }
+
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        if error.domain == NSCocoaErrorDomain && error.code == 3010 {
+            // The error is "REMOTE_NOTIFICATION_SIMULATOR_NOT_SUPPORTED_NSERROR_DESCRIPTION"
+            return
+        }
+
+        Crashlytics.sharedInstance().recordError(error)
+    }
+
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+        switch application.applicationState {
+        case .active:
+            // The app is open right now, we have to show an alert for the notification
+            // TODO: show an in-app notification
+            break
+        default:
+            // The system notification alert was touched by the user.
+            // TODO: handle it
+            break
+        }
+    }
+
+}
