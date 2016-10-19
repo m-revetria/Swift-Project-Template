@@ -31,6 +31,7 @@ PODS:
     - RealmSwift (~> 1.1)
     - RxSwift (~> 3.0.0-beta.1)
   - RxSwift (3.0.0-beta.2)
+  - SlideMenuControllerSwift (3.0.0)
   - SwiftDate (4.0.5)
   - XLSwiftKit (2.0.0)
 
@@ -53,6 +54,7 @@ DEPENDENCIES:
   - RxCocoa (= 3.0.0-beta.2)
   - RxRealm (from `https://github.com/RxSwiftCommunity/RxRealm.git`, tag `0.2.3`)
   - RxSwift (= 3.0.0-beta.2)
+  - SlideMenuControllerSwift (~> 3.0.0)
   - SwiftDate (~> 4.0.5)
   - XLSwiftKit (~> 2.0.0)
 
@@ -105,9 +107,10 @@ SPEC CHECKSUMS:
   RxCocoa: 1dd105d8a4e18034ccd7bd6d136445363ce67c8e
   RxRealm: 56fb63ead229e0a568f6014f81a0530f74cd8bfa
   RxSwift: 0ea939d7d97cb70657190ffde8dc2a9b455778fc
+  SlideMenuControllerSwift: 9c0a84f9a3fba51681debd7be77617094562ebcc
   SwiftDate: a945bf4150ef977824df91116ca30a04604216d3
   XLSwiftKit: 4d48322a602120dc6300d58d7fb07b873e223c1c
 
-PODFILE CHECKSUM: 61eb44db0c7f82f6a32e590540815094b6103bce
+PODFILE CHECKSUM: 7d82dc7b2fe763727a3fc84a3776c9fcfbcbaee7
 
 COCOAPODS: 1.0.1
