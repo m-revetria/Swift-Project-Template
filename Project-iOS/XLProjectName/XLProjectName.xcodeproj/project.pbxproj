@@ -44,6 +44,8 @@
 		B2866B951D9EE2BE00E93DED /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2866B931D9EE2BE00E93DED /* Routes.swift */; };
 		B28C9C601DA6ED2400B36F58 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28C9C5F1DA6ED2400B36F58 /* Error.swift */; };
 		B28C9C611DA6ED2400B36F58 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28C9C5F1DA6ED2400B36F58 /* Error.swift */; };
+		B2947EAF1DB7B1CB009F5CE5 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2947EAE1DB7B1CB009F5CE5 /* RealmManager.swift */; };
+		B2947EB01DB7B1CB009F5CE5 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2947EAE1DB7B1CB009F5CE5 /* RealmManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +127,7 @@
 		B2866B8C1D9ED62900E93DED /* SessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		B2866B931D9EE2BE00E93DED /* Routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		B28C9C5F1DA6ED2400B36F58 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		B2947EAE1DB7B1CB009F5CE5 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		DEE523F7CE6A0E56FCF7A0A5 /* Pods_XLProjectName.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XLProjectName.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CE8DAF3DF9D8499BA58B7A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -246,6 +249,7 @@
 		28C282381C7795B3003ECA4F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B2947EAE1DB7B1CB009F5CE5 /* RealmManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -815,6 +819,7 @@
 				B2947EBB1DB7B442009F5CE5 /* XLProjectNameViewController.swift in Sources */,
 				B2947EB81DB7B41D009F5CE5 /* XLProjectNameNavigationController.swift in Sources */,
 				B28C9C611DA6ED2400B36F58 /* Error.swift in Sources */,
+				B2947EB01DB7B1CB009F5CE5 /* RealmManager.swift in Sources */,
 				B2866B8E1D9ED62900E93DED /* NetworkManager.swift in Sources */,
 				B2866B951D9EE2BE00E93DED /* Routes.swift in Sources */,
 				2841F1EE1CCFF55600D609CE /* AppDelegate.swift in Sources */,
@@ -835,6 +840,7 @@
 				B2947EBA1DB7B442009F5CE5 /* XLProjectNameViewController.swift in Sources */,
 				B2947EB71DB7B41D009F5CE5 /* XLProjectNameNavigationController.swift in Sources */,
 				B232851F1DAE5C4200859100 /* UIImageView.swift in Sources */,
+				B2947EAF1DB7B1CB009F5CE5 /* RealmManager.swift in Sources */,
 				B23285221DAE628B00859100 /* Device.swift in Sources */,
 				B23285191DAE5B5300859100 /* String.swift in Sources */,
 				B2866B8F1D9ED62900E93DED /* RouteType.swift in Sources */,
